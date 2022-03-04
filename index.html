@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        html,body{
+            height: 100%;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --cellWidth: 90px;
+            --cellHeight: 90px;
+        }
+        
+        .body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center; */
+            background-image: linear-gradient(to top left, rgb(181, 156, 240), rgb(127, 218, 224));
+            height: 100%;
+    
+        }
+
+        .heading {
+            /* justify-self: start; */
+            /* align-self: flex-start; */
+            width: 100%;
+            /* border: 5px solid #111; */
+            height: 200px;
+            border-radius: 84px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            font-size: 80px;
+            font-family: fantasy;
+            background-color: rgb(206, 120, 240);
+            background-image: linear-gradient(to top left, rgb(171, 248, 248), rgb(172, 126, 233));
+
+        }
+
+        #puzzle {
+            width: calc(9*var(--cellWidth));
+            height: calc(9*var(--cellHeight));
+
+            align-self: center;
+            margin-top: 5%;
+            /* margin-left: 35%; */
+
+            border: 5px solid#000;
+
+        }
+
+        #puzzle input[type=text] {
+            caret-color: transparent;
+            font-size: 50px;
+            text-transform: uppercase;
+            width: var(--cellWidth);
+            height: var(--cellHeight);
+
+            box-sizing: border-box;
+            border: 2px solid rgb(236, 169, 67);
+            border-spacing: 30px;
+            -moz-appearance: textfield;
+            text-align: center;
+            /* font-size: la; */
+        }
+        #puzzle input[type=text]:focus {
+            background-color: rgba(187, 222, 251, 3);
+        }
+
+        #solvebutton {
+            text-align: center;
+            width: 250px;
+            height: 80px;
+            font-size: 35px;
+            /* background-color: rgba(126, 1, 243, 0.884); */
+            background-image: linear-gradient(to top left, rgb(233, 182, 106), rgb(199, 173, 59));
+            color: rgb(105, 27, 63);
+            border-radius: 50px;
+            opacity: 1;
+            margin-top: 20px;
+        }
+
+        #solvebutton:hover {
+            opacity: 0.5;
+        }
+
+        .button {
+            width: 150px;
+            height: 50px;
+            line-height: 50mm;
+            /* text-align: left; */
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="body">
+        <div class="heading">Sudoku Solver</div>
+        <div id="puzzle"></div>
+            <button id="solvebutton"> Start Solving</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
