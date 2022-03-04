@@ -31,13 +31,14 @@ for (let i = 0; i < squares; i++) {
 
 function addBorder(){
     let inputs = document.querySelectorAll('input')
-    for( let i=2;i<squares;i=i+3){
-        inputs[i].style.borderRight="3px solid #000"
+    for( let i=0;i<squares;i=i+9){
+            inputs[i+2].style.borderRight="4px solid #000"
+            inputs[i+5].style.borderRight="4px solid #000"
         // console.log(input[i]);
     }
-    for( let i=18;i<squares;i=i+27){
+    for( let i=18;i<squares-27;i=i+27){
         for(let j=i;j<i+9;j++){
-            inputs[j].style.borderBottom="3px solid #000"
+            inputs[j].style.borderBottom="4px solid #000"
         }
     }
 
