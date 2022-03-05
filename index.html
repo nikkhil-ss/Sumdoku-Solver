@@ -8,24 +8,27 @@
     <title>Sudoku Solver</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
-        html,body{
+        html,
+        body {
             height: 100%;
             box-sizing: border-box;
         }
-        
+
         :root {
             --cellWidth: 60px;
             --cellHeight: 60px;
         }
-        
+
         .body {
+            height: 100%;
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             /* justify-content: center; */
             background-image: linear-gradient(to top left, rgb(181, 156, 240), rgb(127, 218, 224));
             height: 100%;
-    
+
         }
 
         .heading {
@@ -72,6 +75,7 @@
             text-align: center;
             /* font-size: la; */
         }
+
         #puzzle input[type=text]:focus {
             background-color: rgba(187, 222, 251, 3);
         }
@@ -108,7 +112,7 @@
     <div class="body">
         <div class="heading">Sudoku Solver</div>
         <div id="puzzle"></div>
-            <button id="solvebutton"> Start Solving</button>
+        <button id="solvebutton"> Start Solving</button>
     </div>
     <script src="app.js"></script>
 </body>
